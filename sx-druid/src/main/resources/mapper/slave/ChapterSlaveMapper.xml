@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="sx.book.web.mapper.slave.ChapterSlaveMapper">
+
+    <resultMap id="ChapterMap" type="sx.book.web.pojo.Chapter">
+        <result column="id" property="id"></result>
+        <result column="chapterName" property="chapterName"></result>
+        <result column="chapterURL" property="chapterURL"></result>
+        <result column="bookId" property="bookId"></result>
+        <result column="orderNum" property="orderNum"></result>
+    </resultMap>
+
+    <select id="selectByChapterWrapper" resultMap="ChapterMap">
+        select * from Chapter ${ew.customSqlSegment}
+    </select>
+</mapper>

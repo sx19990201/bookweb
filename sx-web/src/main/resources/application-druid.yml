@@ -1,0 +1,75 @@
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+  global-config:
+    db-config:
+      id-type: auto
+      capital-mode: true
+  type-aliases-package: sx.book.web.pojo
+  mapper-locations: classpath*:mapper/*/*.xml
+spring:
+  profiles: druid
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      stat-view-servlet:
+        enabled: true
+        login-username: admin
+        login-password: 123456
+        reset-enable: false
+        url-pattern: /druid/*
+      web-stat-filter:
+        url-pattern: /*
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
+    dynamic:
+      primary: master
+      datasource:
+        master:
+          username: root
+          password: root
+          url: jdbc:mysql://112.126.57.255:3306/books?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          druid:
+            initial-size: 10
+            min-idle: 10
+            max-active: 130
+            max-wait: 60000
+            time-between-eviction-runs-millis: 60000
+            min-evictable-idle-time-millis: 300000
+            validation-query: SELECT 1 FROM DUAL
+            test-while-idle: true
+            test-on-borrow: false
+            test-on-return: false
+            pool-prepared-statements: true
+            max-pool-prepared-statement-per-connection-size: 20
+            filters: stat,wall
+            use-global-data-source-stat: true
+            connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+        slave:
+          username: slaveuser
+          password: root
+          url: jdbc:mysql://112.126.57.255:3307/books?serverTimezone=UTC&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          druid:
+            initial-size: 10
+            min-idle: 10
+            max-active: 130
+            max-wait: 60000
+            time-between-eviction-runs-millis: 60000
+            min-evictable-idle-time-millis: 300000
+            validation-query: SELECT 1 FROM DUAL
+            test-while-idle: true
+            test-on-borrow: false
+            test-on-return: false
+            pool-prepared-statements: true
+            max-pool-prepared-statement-per-connection-size: 20
+            filters: stat,wall
+            use-global-data-source-stat: true
+            connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+booklist:
+  book-type-list:
+  books-list:
+  chapter-list:
+#book-util-list: bookUtilList

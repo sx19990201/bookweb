@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sx-druid" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sx-druid/src/main/resources/application-druid.yml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/sx-quarzt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sx-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sx-web/src/main/resources/application-druid.yml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/sx-web/src/main/resources/application-druid.yml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/sx-web/target/classes/application-druid.yml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/sx-webmagic" charset="UTF-8" />
+    <file url="PROJECT" charset="GBK" />
+  </component>
+</project>

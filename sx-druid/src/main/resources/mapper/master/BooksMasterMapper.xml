@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="sx.book.web.mapper.master.BooksMasterMapper">
+
+    <insert id="insertBooks" useGeneratedKeys="true" statementType="CALLABLE" parameterType="sx.book.web.pojo.Books">
+        {
+            call addBooks(
+                #{books.bookName,jdbcType=VARCHAR,mode=IN},
+                #{books.bookURL,jdbcType=VARCHAR,mode=IN},
+                #{books.author,jdbcType=VARCHAR,mode=IN},
+                #{books.info,jdbcType=VARCHAR,mode=IN},
+                #{books.typeId,jdbcType=INTEGER,mode=IN},
+                #{books.imgURL,jdbcType=VARCHAR,mode=IN}
+            )
+        }
+    </insert>
+
+</mapper>

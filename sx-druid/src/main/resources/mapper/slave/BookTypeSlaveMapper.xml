@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="sx.book.web.mapper.slave.BookTypeSlaveMapper">
+
+    <resultMap id="BookTypeMap" type="sx.book.web.pojo.BookType">
+        <result property="id" column="id"></result>
+        <result property="typeName" column="typeName"></result>
+    </resultMap>
+
+    <select id="selectByBookTypeWrapper" resultMap="BookTypeMap">
+        select * from booktype ${ew.customSqlSegment}
+    </select>
+
+    <select id="selectIdByName" resultType="integer">
+        select id from booktype where typeName = #{typeName}
+    </select>
+ <!--   <select id="selectByName" resultMap="BookTypeMap" parameterType="sx.books.demo.pojo.BookType">
+        select * from booktype where typeName = #{name}
+    </select>-->
+
+</mapper>

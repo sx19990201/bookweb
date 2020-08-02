@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/sx-druid/sx-druid.iml" filepath="$PROJECT_DIR$/sx-druid/sx-druid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sx-quarzt/sx-quarzt.iml" filepath="$PROJECT_DIR$/sx-quarzt/sx-quarzt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sx-vue/sx-vue.iml" filepath="$PROJECT_DIR$/sx-vue/sx-vue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sx-web/sx-web.iml" filepath="$PROJECT_DIR$/sx-web/sx-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sx-web-parent.iml" filepath="$PROJECT_DIR$/sx-web-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sx-webmagic/sx-webmagic.iml" filepath="$PROJECT_DIR$/sx-webmagic/sx-webmagic.iml" />
+    </modules>
+  </component>
+</project>
